@@ -185,10 +185,10 @@ class Simulator(object):
                         # Render text
                         self.render_text(trial, testing)
 
-                    # Render GUI and sleep
-                    if self.display:
-                        self.render(trial, testing)
-                        self.pygame.time.wait(self.frame_delay)
+                        # Render GUI and sleep
+                        if self.display:
+                            self.render(trial, testing)
+                            self.pygame.time.wait(self.frame_delay)
 
                 except KeyboardInterrupt:
                     self.quit = True
@@ -295,7 +295,7 @@ class Simulator(object):
             a = self.env.primary_agent
             print "Simulating trial. . . "
             if a.learning:
-                print "espilon = {:.4f}; alpha = {:.4f}".format(a.epsilon, a.alpha)
+                print "epsilon = {:.4f}; alpha = {:.4f}".format(a.epsilon, a.alpha)
             else:
                 print "Agent not set to learn."
 
